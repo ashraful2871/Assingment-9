@@ -28,13 +28,15 @@ Many e-commerce stores offer various types of vouchers and coupon codes for disc
 
 ## **Layout Design**
 
+✅ ❌
+
 ### **Header**
 
-- Displays a welcome message with the user's name if logged in.
-- Includes a logo on the left.
-- Navigation with icons and text for routes: `Home`, `Brands`, `My Profile` (logged-in users only), and `About Dev`.
-- Shows login and registration buttons for guests.
-- Displays user picture, email, and a logout button for logged-in users.
+- Displays a welcome message with the user's name if logged in.❌
+- Includes a logo on the left.❌
+- Navigation with icons and text for routes: `Home`, `Brands`, `My Profile` (logged-in users only), and `About Dev`.❌
+- Shows login and registration buttons for guests.❌
+- Displays user picture, email, and a logout button for logged-in users.❌✅
 
 ### **Main Section**
 

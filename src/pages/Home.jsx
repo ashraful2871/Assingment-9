@@ -1,7 +1,12 @@
 import React from "react";
 import TopBrands from "../components/TopBrands";
+import BrandSells from "../components/BrandSels";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const brandData = useLoaderData();
+  // console.log(data);
+
   return (
     <div>
       <div className="carousel w-full rounded-2xl">
@@ -66,6 +71,7 @@ const Home = () => {
       <div className="py-6">
         <TopBrands></TopBrands>
       </div>
+      <BrandSells brandData={brandData}></BrandSells>
     </div>
   );
 };

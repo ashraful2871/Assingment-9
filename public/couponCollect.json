@@ -1,0 +1,184 @@
+[
+  {
+    "_id": "1",
+    "brand_name": "TechMall",
+    "rating": 4.5,
+    "description": "TechMall offers a variety of the latest tech gadgets and accessories.",
+    "brand_logo": "https://i.ibb.co.com/fSG26R2/Logo-Techmall-2020-01.webp",
+    "coupons": [
+      {
+        "coupon_code": "TECH20",
+        "description": "20% off on all tech products.",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for all products above $50.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "FREESHIP",
+        "description": "Free shipping on orders over $100.",
+        "expiry_date": "2024-11-30",
+        "condition": "Free shipping for orders within Bangladesh.",
+        "coupon_type": "Free Shipping"
+      }
+    ],
+    "shop_Link": "https://techmall.com",
+    "category": "Electronics",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "brand_name": "FashionArena",
+    "rating": 4.2,
+    "description": "A leading online store for fashionable clothing and accessories.",
+    "brand_logo": "https://i.ibb.co.com/2tDKZn7/Fashion-Arena.jpg",
+    "coupons": [
+      {
+        "coupon_code": "FASH10",
+        "description": "Get 10% off on fashion accessories.",
+        "expiry_date": "2024-12-15",
+        "condition": "Valid on accessories only.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "FASHIONFIRST",
+        "description": "15% off on your first order.",
+        "expiry_date": "2024-11-30",
+        "condition": "First-time users only.",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_Link": "https://fashionarena.com",
+    "category": "Fashion",
+    "isSaleOn": false
+  },
+  {
+    "_id": "3",
+    "brand_name": "GourmetShop",
+    "rating": 4.7,
+    "description": "GourmetShop offers the finest gourmet food items from around the world.",
+    "brand_logo": "https://i.ibb.co.com/vZkkM0G/Gourmet-Shop-Logo-03-af49ad52-d722-4334-94e1-02793ab8c526.webp",
+    "coupons": [
+      {
+        "coupon_code": "GOURMET15",
+        "description": "15% off on all gourmet products.",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid on orders over $50.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "FREEDRINK",
+        "description": "Get a free drink with every food purchase above $30.",
+        "expiry_date": "2024-11-25",
+        "condition": "Only available in select cities.",
+        "coupon_type": "Free Item"
+      }
+    ],
+    "shop_Link": "https://gourmetshop.com",
+    "category": "Food & Beverages",
+    "isSaleOn": true
+  },
+  {
+    "_id": "4",
+    "brand_name": "BookWorld",
+    "rating": 4.3,
+    "description": "BookWorld offers a wide selection of books in various genres.",
+    "brand_logo": "https://i.ibb.co.com/2cbXKGp/world-globe-earth-planet-book-600nw-2169914803.jpg",
+    "coupons": [
+      {
+        "coupon_code": "BOOK5",
+        "description": "5% off on all books.",
+        "expiry_date": "2024-12-05",
+        "condition": "Valid on all books.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "FIRSTBOOK",
+        "description": "Get a free book on your first purchase above $50.",
+        "expiry_date": "2024-11-30",
+        "condition": "Free book is selected by BookWorld.",
+        "coupon_type": "Free Item"
+      }
+    ],
+    "shop_Link": "https://bookworld.com",
+    "category": "Books",
+    "isSaleOn": false
+  },
+  {
+    "_id": "5",
+    "brand_name": "BeautyHub",
+    "rating": 4.6,
+    "description": "BeautyHub offers top-rated beauty and skincare products.",
+    "brand_logo": "https://i.ibb.co.com/gWTVQz6/print-206107926.jpg",
+    "coupons": [
+      {
+        "coupon_code": "BEAUTY10",
+        "description": "10% off on all skincare products.",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid on skincare products only.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "NEWUSER15",
+        "description": "15% off for new users on first purchase.",
+        "expiry_date": "2024-11-25",
+        "condition": "Only for new customers.",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_Link": "https://beautyhub.com",
+    "category": "Beauty",
+    "isSaleOn": true
+  },
+  {
+    "_id": "6",
+    "brand_name": "SportyStuff",
+    "rating": 4.4,
+    "description": "SportyStuff offers a range of sports equipment and apparel.",
+    "brand_logo": "https://i.ibb.co.com/Pc2bgK6/logo-trial.png",
+    "coupons": [
+      {
+        "coupon_code": "SPORT10",
+        "description": "10% off on selected sports gear.",
+        "expiry_date": "2024-12-01",
+        "condition": "Valid on selected gear only.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "SPORTFREE",
+        "description": "Free sports water bottle with purchases above $50.",
+        "expiry_date": "2024-11-20",
+        "condition": "Water bottle choice varies.",
+        "coupon_type": "Free Item"
+      }
+    ],
+    "shop_Link": "https://sportystuff.com",
+    "category": "Sports",
+    "isSaleOn": true
+  },
+  {
+    "_id": "7",
+    "brand_name": "HomeEssentials",
+    "rating": 4.8,
+    "description": "HomeEssentials offers everything you need to make your house a home.",
+    "brand_logo": "https://i.ibb.co.com/qMMVgNQ/images-1.png",
+    "coupons": [
+      {
+        "coupon_code": "HOME25",
+        "description": "25% off on all home furniture.",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid on furniture items above $100.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "HOMESALE",
+        "description": "Flash sale! Up to 50% off on selected furniture.",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid only during flash sale.",
+        "coupon_type": "Sale"
+      }
+    ],
+    "shop_Link": "https://homeessentials.com",
+    "category": "Home Goods",
+    "isSaleOn": true
+  }
+]
