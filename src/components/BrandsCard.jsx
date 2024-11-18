@@ -5,9 +5,9 @@ const BrandsCard = ({ brand }) => {
   const { _id, brand_logo, brand_name, coupons, category } = brand;
   return (
     <div className="card card-compact bg-base-100 border-2 p-4">
-      <figure className="w-[333px] h-48 ">
+      <figure className=" w-[333px] h-[333px] ">
         <img
-          className="w-full h-full rounded-2xl object-fill"
+          className="w-full h-full rounded-2xl"
           src={brand_logo}
           alt="Shoes"
         />

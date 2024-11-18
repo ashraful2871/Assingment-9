@@ -12,6 +12,7 @@ import AuthProvider from "./provider/AuthProvider";
 import PrivetRoute from "./privet/privetRoute";
 import About from "./pages/About";
 import BrandSells from "./components/BrandSels";
+import BrandsDetails from "./pages/BrandsDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("./couponCollect.json"),
+        loader: () => fetch("/couponCollect.json"),
       },
       {
         path: "/login",
@@ -37,7 +38,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/brand/:id",
-        element: <BrandSells></BrandSells>,
+        element: <BrandsDetails></BrandsDetails>,
+        loader: async ({ params }) => {
+          const res = await fetch("/couponCollect.json");
+          const data = await res.json();
+          const singleData = data.find((d) => d._id === params.id);
+          // console.log(singleData);
+          return singleData;
+        },
       },
       {
         path: "/my-profile",

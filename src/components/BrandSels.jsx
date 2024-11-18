@@ -2,9 +2,8 @@ import React from "react";
 import BrandsCard from "./BrandsCard";
 
 const BrandSells = ({ brandData }) => {
-  //   console.log(brandData);
   const brands = brandData.filter((brand) => brand.isSaleOn);
-  console.log(brands);
+
   return (
     <div>
       <h2 className="text-center text-5xl font-semibold mb-5">

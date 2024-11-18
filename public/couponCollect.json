@@ -1,88 +1,88 @@
 [
   {
     "_id": "1",
-    "brand_name": "TechMall",
+    "brand_name": "Daraz",
     "rating": 4.5,
-    "description": "TechMall offers a variety of the latest tech gadgets and accessories.",
-    "brand_logo": "https://i.ibb.co.com/fSG26R2/Logo-Techmall-2020-01.webp",
+    "description": "Daraz is one of the leading online marketplaces in Bangladesh, offering a wide range of products.",
+    "brand_logo": "https://i.ibb.co.com/HhwmZCN/daraz.png",
     "coupons": [
       {
-        "coupon_code": "TECH20",
-        "description": "20% off on all tech products.",
+        "coupon_code": "DARAZ20",
+        "description": "20% off on all products.",
         "expiry_date": "2024-12-31",
-        "condition": "Valid for all products above $50.",
+        "condition": "Valid for all products above 500 BDT.",
         "coupon_type": "Discount"
       },
       {
-        "coupon_code": "FREESHIP",
-        "description": "Free shipping on orders over $100.",
+        "coupon_code": "FREESHIPBD",
+        "description": "Free shipping on orders over 1000 BDT.",
         "expiry_date": "2024-11-30",
         "condition": "Free shipping for orders within Bangladesh.",
         "coupon_type": "Free Shipping"
       }
     ],
-    "shop_Link": "https://techmall.com",
-    "category": "Electronics",
+    "shop_Link": "https://daraz.com.bd",
+    "category": "Marketplace",
     "isSaleOn": true
   },
   {
     "_id": "2",
-    "brand_name": "FashionArena",
+    "brand_name": "AjkerDeal",
     "rating": 4.2,
-    "description": "A leading online store for fashionable clothing and accessories.",
-    "brand_logo": "https://i.ibb.co.com/2tDKZn7/Fashion-Arena.jpg",
+    "description": "AjkerDeal is a popular e-commerce platform for affordable products in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/GPbrrdV/ajk.png",
     "coupons": [
       {
-        "coupon_code": "FASH10",
-        "description": "Get 10% off on fashion accessories.",
+        "coupon_code": "AJKER10",
+        "description": "Get 10% off on select products.",
         "expiry_date": "2024-12-15",
-        "condition": "Valid on accessories only.",
+        "condition": "Valid on electronics only.",
         "coupon_type": "Discount"
       },
       {
-        "coupon_code": "FASHIONFIRST",
+        "coupon_code": "AJKERFIRST",
         "description": "15% off on your first order.",
         "expiry_date": "2024-11-30",
         "condition": "First-time users only.",
         "coupon_type": "Discount"
       }
     ],
-    "shop_Link": "https://fashionarena.com",
-    "category": "Fashion",
+    "shop_Link": "https://ajkerdeal.com",
+    "category": "Electronics",
     "isSaleOn": false
   },
   {
     "_id": "3",
-    "brand_name": "GourmetShop",
+    "brand_name": "Chaldal",
     "rating": 4.7,
-    "description": "GourmetShop offers the finest gourmet food items from around the world.",
-    "brand_logo": "https://i.ibb.co.com/vZkkM0G/Gourmet-Shop-Logo-03-af49ad52-d722-4334-94e1-02793ab8c526.webp",
+    "description": "Chaldal delivers groceries and essentials straight to your door.",
+    "brand_logo": "https://i.ibb.co.com/SV08hLY/chal.jpg",
     "coupons": [
       {
-        "coupon_code": "GOURMET15",
-        "description": "15% off on all gourmet products.",
+        "coupon_code": "CHALDAL15",
+        "description": "15% off on grocery items.",
         "expiry_date": "2024-12-31",
-        "condition": "Valid on orders over $50.",
+        "condition": "Valid on orders over 1000 BDT.",
         "coupon_type": "Discount"
       },
       {
-        "coupon_code": "FREEDRINK",
-        "description": "Get a free drink with every food purchase above $30.",
+        "coupon_code": "FREEFOOD",
+        "description": "Get a free snack with orders above 500 BDT.",
         "expiry_date": "2024-11-25",
-        "condition": "Only available in select cities.",
+        "condition": "Offer valid in Dhaka only.",
         "coupon_type": "Free Item"
       }
     ],
-    "shop_Link": "https://gourmetshop.com",
-    "category": "Food & Beverages",
+    "shop_Link": "https://chaldal.com",
+    "category": "Groceries",
     "isSaleOn": true
   },
   {
     "_id": "4",
-    "brand_name": "BookWorld",
+    "brand_name": "Rokomari",
     "rating": 4.3,
-    "description": "BookWorld offers a wide selection of books in various genres.",
-    "brand_logo": "https://i.ibb.co.com/2cbXKGp/world-globe-earth-planet-book-600nw-2169914803.jpg",
+    "description": "Rokomari offers a wide range of books and educational materials.",
+    "brand_logo": "https://i.ibb.co.com/sKh01HX/rk.png",
     "coupons": [
       {
         "coupon_code": "BOOK5",
@@ -92,92 +92,92 @@
         "coupon_type": "Discount"
       },
       {
-        "coupon_code": "FIRSTBOOK",
-        "description": "Get a free book on your first purchase above $50.",
+        "coupon_code": "FIRSTREAD",
+        "description": "Get a free book on your first purchase above 1000 BDT.",
         "expiry_date": "2024-11-30",
-        "condition": "Free book is selected by BookWorld.",
+        "condition": "Free book is selected by Rokomari.",
         "coupon_type": "Free Item"
       }
     ],
-    "shop_Link": "https://bookworld.com",
+    "shop_Link": "https://rokomari.com",
     "category": "Books",
     "isSaleOn": false
   },
   {
     "_id": "5",
-    "brand_name": "BeautyHub",
+    "brand_name": "Shajgoj",
     "rating": 4.6,
-    "description": "BeautyHub offers top-rated beauty and skincare products.",
-    "brand_logo": "https://i.ibb.co.com/gWTVQz6/print-206107926.jpg",
+    "description": "Shajgoj offers top-rated beauty and skincare products in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/NTbVF0B/sj.png",
     "coupons": [
       {
-        "coupon_code": "BEAUTY10",
+        "coupon_code": "BEAUTYBD",
         "description": "10% off on all skincare products.",
         "expiry_date": "2024-11-30",
         "condition": "Valid on skincare products only.",
         "coupon_type": "Discount"
       },
       {
-        "coupon_code": "NEWUSER15",
-        "description": "15% off for new users on first purchase.",
+        "coupon_code": "NEWBEAUTY15",
+        "description": "15% off for new users on their first purchase.",
         "expiry_date": "2024-11-25",
         "condition": "Only for new customers.",
         "coupon_type": "Discount"
       }
     ],
-    "shop_Link": "https://beautyhub.com",
+    "shop_Link": "https://shajgoj.com",
     "category": "Beauty",
     "isSaleOn": true
   },
   {
     "_id": "6",
-    "brand_name": "SportyStuff",
+    "brand_name": "Pickaboo",
     "rating": 4.4,
-    "description": "SportyStuff offers a range of sports equipment and apparel.",
-    "brand_logo": "https://i.ibb.co.com/Pc2bgK6/logo-trial.png",
+    "description": "Pickaboo offers top-quality electronics and gadgets in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/FnN117p/pk.png",
     "coupons": [
       {
-        "coupon_code": "SPORT10",
-        "description": "10% off on selected sports gear.",
+        "coupon_code": "PICK10",
+        "description": "10% off on selected gadgets.",
         "expiry_date": "2024-12-01",
-        "condition": "Valid on selected gear only.",
+        "condition": "Valid on selected gadgets only.",
         "coupon_type": "Discount"
       },
       {
-        "coupon_code": "SPORTFREE",
-        "description": "Free sports water bottle with purchases above $50.",
+        "coupon_code": "FREEBOTTLE",
+        "description": "Free water bottle with purchases above 500 BDT.",
         "expiry_date": "2024-11-20",
         "condition": "Water bottle choice varies.",
         "coupon_type": "Free Item"
       }
     ],
-    "shop_Link": "https://sportystuff.com",
-    "category": "Sports",
+    "shop_Link": "https://pickaboo.com",
+    "category": "Electronics",
     "isSaleOn": true
   },
   {
     "_id": "7",
-    "brand_name": "HomeEssentials",
+    "brand_name": "Othoba",
     "rating": 4.8,
-    "description": "HomeEssentials offers everything you need to make your house a home.",
-    "brand_logo": "https://i.ibb.co.com/qMMVgNQ/images-1.png",
+    "description": "Othoba is a reliable e-commerce platform for home goods in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/M5SVbZ5/ot.png",
     "coupons": [
       {
-        "coupon_code": "HOME25",
+        "coupon_code": "HOME25BD",
         "description": "25% off on all home furniture.",
         "expiry_date": "2024-12-31",
-        "condition": "Valid on furniture items above $100.",
+        "condition": "Valid on furniture items above 5000 BDT.",
         "coupon_type": "Discount"
       },
       {
-        "coupon_code": "HOMESALE",
+        "coupon_code": "FLASHSALE50",
         "description": "Flash sale! Up to 50% off on selected furniture.",
         "expiry_date": "2024-11-30",
         "condition": "Valid only during flash sale.",
         "coupon_type": "Sale"
       }
     ],
-    "shop_Link": "https://homeessentials.com",
+    "shop_Link": "https://othoba.com",
     "category": "Home Goods",
     "isSaleOn": true
   }
