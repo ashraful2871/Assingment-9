@@ -11,6 +11,7 @@ const SignUp = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
 
@@ -18,6 +19,27 @@ const SignUp = () => {
     const photoURL = e.target.PhotoURL.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+
+    const hasUppercase = /[A-Z]/;
+    const hasLowercase = /[a-z]/;
+    const hasMinLength = /.{6,}/;
+
+    // check length
+    if (!hasMinLength.test(password)) {
+      setError("password must be 6 character or longer");
+      return;
+    }
+    //check has uppercase
+    if (!hasUppercase.test(password)) {
+      setError("must be one uppercase letter");
+      return;
+    }
+
+    // check has lowercase
+    if (!hasLowercase.test(password)) {
+      setError("must be one lowercase letter");
+      return;
+    }
 
     //sign up
     signUp(email, password)
@@ -106,6 +128,7 @@ const SignUp = () => {
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
+            <p className="text-center mt-2 text-red-600">{error}</p>
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Sign Up</button>

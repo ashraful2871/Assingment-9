@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import TopBrands from "../components/TopBrands";
 import BrandSells from "../components/BrandSels";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Home = () => {
   const brandData = useLoaderData();
+  const { user } = useContext(AuthContext);
   // console.log(data);
 
   return (
     <div>
+      {user && (
+        <h2 className="flex justify-center text-4xl font-bold mb-10">
+          <p>"Hay {user?.displayName} Welcome To Our Site"</p>
+        </h2>
+      )}
       <div className="carousel w-full rounded-2xl">
         <div id="slide1" className="carousel-item relative w-full">
           <img

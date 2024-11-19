@@ -51,37 +51,55 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className="font-bold text-3xl">
-          Collect Coupon{" "}
+        <Link to="/" className="flex items-center gap-2">
+          <div>
+            <img
+              className="w-12"
+              src="https://i.ibb.co.com/4VWpSyw/Free.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <h2 className="font-bold text-3xl">Collect Coupon </h2>
+          </div>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        {user && user?.email ? (
-          <div>
-            <img
-              className="rounded-full w-12 h-12"
-              src={user.photoURL}
-              alt=""
-            />
-            <p>{user.displayName}</p>
-          </div>
-        ) : (
-          // <span>no</span>
-          <p>{user?.displayName}</p>
-        )}
+      <div className="navbar-end items-center gap-5">
+        <div className="">
+          {user?.email && (
+            <div className="flex flex-col items-center">
+              <img
+                className="rounded-full w-8 h-8"
+                src={user.photoURL}
+                alt=""
+              />
+              <p>
+                <small>{user?.email}</small>
+              </p>
+            </div>
+          )}
+        </div>
 
-        {user ? (
-          <button onClick={signOutUser} className="btn btn-neutral">
-            Sign Out
-          </button>
-        ) : (
-          <Link to="/login" className="btn btn-neutral">
-            Login
-          </Link>
-        )}
+        <div>
+          {user ? (
+            <button
+              onClick={signOutUser}
+              className="btn btn-neutral font-bold text-white text-lg"
+            >
+              Sign Out
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="btn btn-neutral font-bold text-white text-lg"
+            >
+              Login
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

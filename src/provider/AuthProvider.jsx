@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -9,6 +10,7 @@ import {
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase";
+import toast from "react-hot-toast";
 
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
@@ -16,9 +18,16 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   console.log(user);
+  const userEmail = user?.email;
+  // console.log(userEmail);
+
+  // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
   //sign up
   const signUp = (email, password) => {
+    // if (!passwordRegex.test(password)) {
+    //   toast.error("dose match");
+    // }
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -44,6 +53,12 @@ const AuthProvider = ({ children }) => {
   const updateUserProfile = (updatedDate) => {
     return updateProfile(auth.currentUser, updatedDate);
   };
+
+  // forget password
+  const forgetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
+
   // OBSERVER
   useEffect(() => {
     const unSub = onAuthStateChanged(auth, (currentUser) => {
@@ -64,6 +79,8 @@ const AuthProvider = ({ children }) => {
     setUser,
     updateUserProfile,
     signInGoogle,
+    userEmail,
+    forgetPassword,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

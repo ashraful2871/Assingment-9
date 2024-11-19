@@ -13,6 +13,7 @@ import PrivetRoute from "./privet/privetRoute";
 import About from "./pages/About";
 import BrandsDetails from "./pages/BrandsDetails";
 import Error from "./pages/Error";
+import ForgetPassword from "./pages/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "/about-dev",
         element: <About></About>,
+      },
+      {
+        path: "/forget-password",
+        element: <ForgetPassword></ForgetPassword>,
       },
     ],
   },

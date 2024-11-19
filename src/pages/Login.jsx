@@ -10,6 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
+  // const [error, setError] = useState("");
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -23,7 +24,7 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        toast.error(error.message);
+        console.log(error.message);
       });
   };
 
@@ -68,6 +69,14 @@ const Login = () => {
               className="input input-bordered"
               required
             />
+            <label className="label">
+              <Link
+                to="/forget-password"
+                className="label-text-alt link link-hover"
+              >
+                Forgot password?
+              </Link>
+            </label>
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
