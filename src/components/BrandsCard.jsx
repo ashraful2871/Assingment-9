@@ -17,7 +17,10 @@ const BrandsCard = ({ brand }) => {
         <p className="text-xl font-bold">Total Coupons: {coupons.length}</p>
         <p className="text-lg font-semibold">Category: {category}</p>
         <div className="card-actions justify-end">
-          <Link to={`/brands-details/${_id}`} className="btn btn-primary">
+          <Link
+            to={`/brands-details/${_id}`}
+            className="btn btn-neutral font-bold text-white"
+          >
             Buy Now
           </Link>
         </div>

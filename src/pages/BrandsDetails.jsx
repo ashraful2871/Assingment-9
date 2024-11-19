@@ -6,7 +6,13 @@ const BrandsDetails = () => {
   const singleData = useLoaderData();
 
   const handleCopy = (copied) => {
-    toast.success(`code ${copied} copied successfully!`);
+    toast.success(`code ${copied} copied successfully!`, {
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
   };
 
   const { brand_logo, brand_name, rating, shop_Link, coupons } = singleData;
@@ -76,7 +82,11 @@ const BrandsDetails = () => {
               <p>{coupon.description}</p>
               <p>Expires: {coupon.expiry_date}</p>
               <div className="card-actions justify-start">
-                <a target="_blank" href={shop_Link} className="btn btn-primary">
+                <a
+                  target="_blank"
+                  href={shop_Link}
+                  className="btn btn-neutral font-bold text-white"
+                >
                   Use Now
                 </a>
               </div>

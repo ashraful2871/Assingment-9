@@ -47,7 +47,13 @@ const SignUp = () => {
         setUser(result.user);
         updateUserProfile({ displayName: name, photoURL: photoURL })
           .then(() => {
-            toast.success("Successfully Signed Up");
+            toast.success("Successfully Signed Up", {
+              style: {
+                borderRadius: "10px",
+                background: "#333",
+                color: "#fff",
+              },
+            });
             navigate("/");
           })
           .catch((error) => {
@@ -63,11 +69,23 @@ const SignUp = () => {
     signInGoogle()
       .then((result) => {
         setUser(result.user);
-        toast.success("Successfully Signed Up");
+        toast.success("Successfully Signed Up", {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error(error.message, {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
       });
   };
 

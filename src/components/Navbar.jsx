@@ -1,26 +1,62 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
+import { IoHomeOutline } from "react-icons/io5";
+import { TbArrowRoundaboutLeft, TbBrandStackshare } from "react-icons/tb";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
 
+  // sign out
+  const handleSignOut = () => {
+    signOutUser();
+    toast.success("Successfully Sign Out", {
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+  };
+
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink className=" font-bold" to="/">
+          <span className="text-base">
+            <IoHomeOutline />
+          </span>{" "}
+          Home
+        </NavLink>
       </li>
 
       <li>
-        <NavLink to="/brands">Brands</NavLink>
+        <NavLink className=" font-bold" to="/brands">
+          <span className="text-base">
+            <TbBrandStackshare />
+          </span>{" "}
+          Brands
+        </NavLink>
       </li>
       {user && (
         <li>
-          <NavLink to="/my-profile">My Profile</NavLink>
+          <NavLink className=" font-bold" to="/my-profile">
+            <span className="text-base">
+              <CgProfile />
+            </span>{" "}
+            My Profile
+          </NavLink>
         </li>
       )}
       <li>
-        <NavLink to="/about-dev">About Dev</NavLink>
+        <NavLink className=" font-bold" to="/about-dev">
+          <span className="text-base">
+            <TbArrowRoundaboutLeft />
+          </span>{" "}
+          About Dev
+        </NavLink>
       </li>
     </>
   );
@@ -86,7 +122,7 @@ const Navbar = () => {
         <div>
           {user ? (
             <button
-              onClick={signOutUser}
+              onClick={handleSignOut}
               className="btn btn-neutral font-bold text-white text-lg"
             >
               Sign Out

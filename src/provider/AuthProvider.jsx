@@ -10,7 +10,6 @@ import {
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase";
-import toast from "react-hot-toast";
 
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {

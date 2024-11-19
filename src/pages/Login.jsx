@@ -20,7 +20,13 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         setUser(result.user);
-        toast.success("Successfully login");
+        toast.success("Successfully login", {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -33,7 +39,13 @@ const Login = () => {
     signInGoogle()
       .then((result) => {
         setUser(result.user);
-        toast.success("Successfully login");
+        toast.success("Successfully login", {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
