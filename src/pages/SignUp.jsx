@@ -1,13 +1,16 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const { signUp, setUser, updateUserProfile, signInGoogle } =
     useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
 
@@ -22,6 +25,7 @@ const SignUp = () => {
         setUser(result.user);
         updateUserProfile({ displayName: name, photoURL: photoURL })
           .then(() => {
+            toast.success("Successfully Signed Up");
             navigate("/");
           })
           .catch((error) => {
@@ -37,16 +41,18 @@ const SignUp = () => {
     signInGoogle()
       .then((result) => {
         setUser(result.user);
+        toast.success("Successfully Signed Up");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error.message);
       });
   };
 
   return (
     <div className="flex justify-center mt-10">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <h2 className="text-center text-4xl font-bold mt-6">Sign Up Now</h2>
         <form onSubmit={handleSignUpSubmit} className="card-body">
           <div className="form-control">
             <label className="label">
@@ -82,17 +88,24 @@ const SignUp = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               placeholder="password"
               className="input input-bordered"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="btn btn-xs absolute right-2 top-12 text-lg"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Sign Up</button>

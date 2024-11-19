@@ -6,18 +6,19 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Brand from "./pages/Brand";
+import Brands from "./pages/Brands";
 import MyProfile from "./pages/MyProfile";
 import AuthProvider from "./provider/AuthProvider";
 import PrivetRoute from "./privet/privetRoute";
 import About from "./pages/About";
-import BrandSells from "./components/BrandSels";
 import BrandsDetails from "./pages/BrandsDetails";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -34,16 +35,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/brands",
-        element: <Brand></Brand>,
+        element: <Brands></Brands>,
+        loader: () => fetch("/couponCollect.json"),
       },
       {
-        path: "/brand/:id",
-        element: <BrandsDetails></BrandsDetails>,
+        path: "/brands-details/:id",
+        element: (
+          <PrivetRoute>
+            <BrandsDetails></BrandsDetails>
+          </PrivetRoute>
+        ),
         loader: async ({ params }) => {
           const res = await fetch("/couponCollect.json");
           const data = await res.json();
           const singleData = data.find((d) => d._id === params.id);
-          // console.log(singleData);
           return singleData;
         },
       },

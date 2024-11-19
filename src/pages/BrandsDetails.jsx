@@ -1,6 +1,6 @@
 import CopyToClipboard from "react-copy-to-clipboard";
-import { toast, Toaster } from "react-hot-toast";
-import { Link, useLoaderData } from "react-router-dom";
+import { toast } from "react-hot-toast";
+import { useLoaderData } from "react-router-dom";
 
 const BrandsDetails = () => {
   const singleData = useLoaderData();
@@ -52,7 +52,7 @@ const BrandsDetails = () => {
         <span> ({rating})</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-96 ml-40">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-96 ml-40 ">
         {coupons.map((coupon, idx) => (
           <div
             key={idx}
@@ -70,18 +70,13 @@ const BrandsDetails = () => {
                   <button className="btn bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mb-4">
                     Copy Code
                   </button>
-                  <Toaster></Toaster>
                 </div>
               </CopyToClipboard>
               <h2 className="card-title font-bold">{coupon.condition}</h2>
               <p>{coupon.description}</p>
               <p>Expires: {coupon.expiry_date}</p>
               <div className="card-actions justify-start">
-                <a
-                  target="_blank"
-                  href={singleData.shop_Link}
-                  className="btn btn-primary"
-                >
+                <a target="_blank" href={shop_Link} className="btn btn-primary">
                   Use Now
                 </a>
               </div>
