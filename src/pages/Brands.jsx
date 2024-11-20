@@ -17,9 +17,9 @@ const Brands = () => {
             className="card items-center card-side bg-base-100 shadow-xl p-5 hover:scale-105 transition-transform duration-200 border-2"
           >
             <div className="flex flex-col items-center md:pl-8">
-              <figure className="w-20 h-20">
+              <figure>
                 <img
-                  className=" rounded-full"
+                  className="w-20 h-20 rounded-full"
                   src={brand.brand_logo}
                   alt="Movie"
                 />
@@ -68,7 +68,7 @@ const Brands = () => {
               <div className="card-actions">
                 <Link
                   to={`/brands-details/${brand._id}`}
-                  className="btn btn-primary"
+                  className="btn btn-neutral font-bold text-white text-lg"
                 >
                   View Coupons
                 </Link>
