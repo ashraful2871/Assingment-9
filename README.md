@@ -17,12 +17,12 @@ Many e-commerce stores offer various types of vouchers and coupon codes for disc
 
 ## **Key Features**
 
-- **GitHub Commits:** Includes at least 10 meaningful commits with descriptive messages.
-- **Readme.md:** Contains project name, purpose, live URL, key features, and npm packages used.
-- **Responsiveness:** Fully responsive for mobile, tablet, and desktop devices.
-- **Environment Variables:** Firebase configuration keys are securely stored in environment variables.
-- **Unique Design:** A winter-themed, division-focused design that encourages local support.
-- **Hosting:** Supports hosting on Netlify, Surge, or Firebase. Ensures error-free reloading on any route.
+- **GitHub Commits:** Includes at least 10 meaningful commits with descriptive messages.✅
+- **Readme.md:** Contains project name, purpose, live URL, key features, and npm packages used.❌
+- **Responsiveness:** Fully responsive for mobile, tablet, and desktop devices.✅
+- **Environment Variables:** Firebase configuration keys are securely stored in environment variables.❌
+- **Unique Design:** A winter-themed, division-focused design that encourages local support.❌✅
+- **Hosting:** Supports hosting on Netlify, Surge, or Firebase. Ensures error-free reloading on any route.✅
 
 ---
 
@@ -32,11 +32,11 @@ Many e-commerce stores offer various types of vouchers and coupon codes for disc
 
 ### **Header**
 
-- Displays a welcome message with the user's name if logged in.❌
-- Includes a logo on the left.❌
-- Navigation with icons and text for routes: `Home`, `Brands`, `My Profile` (logged-in users only), and `About Dev`.❌
+- Displays a welcome message with the user's name if logged in.✅
+- Includes a logo on the left.✅
+- Navigation with icons and text for routes: `Home`, `Brands`, `My Profile` (logged-in users only), and `About Dev`.✅
 - Shows login and registration buttons for guests.❌
-- Displays user picture, email, and a logout button for logged-in users.❌✅
+- Displays user picture, email, and a logout button for logged-in users.✅
 
 ### **Main Section**
 
@@ -44,7 +44,7 @@ Many e-commerce stores offer various types of vouchers and coupon codes for disc
 
 ### **Footer**
 
-- Includes copyright text, social icons, and links to the developer's profile.
+- Includes copyright text, social icons, and links to the developer's profile.✅
 
 ---
 
@@ -52,37 +52,37 @@ Many e-commerce stores offer various types of vouchers and coupon codes for disc
 
 ### **Banner with Slider**
 
-- A static slider with relevant images.
+- A static slider with relevant images.✅
 
 ### **Top Brands**
 
-- Title and brand data.
-- Displays all brand logos with React Fast Marquee.
-- Pauses transition on hover.
-- Clicking a logo redirects to the brand route.
+- Title and brand data.✅
+- Displays all brand logos with React Fast Marquee.❌
+- Pauses transition on hover.✅
+- Clicking a logo redirects to the brand route.❌
 
 ### **Brands on Sale**
 
-- Displays brands with `isSaleOn` set to `true`.
-- Shows brand logo, name, total coupons, and category in a card format.
+- Displays brands with `isSaleOn` set to `true`.✅
+- Shows brand logo, name, total coupons, and category in a card format.✅
 
 ### **Extra Sections**
 
-- Includes two additional sections with your own ideas (static or dynamic).
+- Includes two additional sections with your own ideas (static or dynamic).❌
 
 ---
 
 ## **Brands Page (`/brands`)**
 
-- Displays all brand information in a card format with a search bar.
+- Displays all brand information in a card format with a search bar.❌
 - Each card includes:
-  - Brand Logo
-  - Brand Name
-  - Rating with a star icon
-  - Description
-  - "View Coupons" button
-  - A bouncing text "sale is on" if `isSaleOn` is `true`
-- Clicking the "View Coupons" button redirects logged-in users to the brand details route. Guests are redirected to the login page.
+  - Brand Logo✅
+  - Brand Name✅
+  - Rating with a star icon✅
+  - Description✅
+  - "View Coupons" button✅
+  - A bouncing text "sale is on" if `isSaleOn` is `true`✅
+- Clicking the "View Coupons" button redirects logged-in users to the brand details route. Guests are redirected to the login page.✅
 
 ---
 
@@ -158,33 +158,3 @@ Many e-commerce stores offer various types of vouchers and coupon codes for disc
 ## **Error Page**
 
 - Displays a 404 page for invalid routes with a button to return to the Home page.
-
----
-
-## **Generated JSON Data**
-
-- Example structure:
-
-```json
-[
-  {
-    "_id": "unique-id-1",
-    "brand_name": "Brand 1",
-    "rating": 4.5,
-    "description": "Discounts on Brand 1",
-    "brand_logo": "logo-url",
-    "coupons": [
-      {
-        "coupon-code": "DISCOUNT10",
-        "description": "10% off",
-        "expiry-date": "2024-12-31",
-        "condition": "Minimum purchase 500",
-        "coupon_type": "Percentage"
-      }
-    ],
-    "shop-Link": "https://brand1.com",
-    "category": "Fashion",
-    "isSaleOn": true
-  }
-]
-```

@@ -58,7 +58,7 @@ const BrandsDetails = () => {
         <span> ({rating})</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-[500px] border-2 border-red-600">
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-[500px]">
         {coupons.map((coupon, idx) => (
           <div
             key={idx}

@@ -37,10 +37,11 @@ const UpdateProfile = () => {
               <span className="label-text">PhotoURL</span>
             </label>
             <input
+              className="input input-bordered"
               type="text"
               name="PhotoURL"
               placeholder="PhotoURl"
-              className="input input-bordered"
+              required
             />
           </div>
           <div className="form-control">
@@ -48,16 +49,17 @@ const UpdateProfile = () => {
               <span className="label-text">Name</span>
             </label>
             <input
+              className="input input-bordered"
               type="text"
               name="name"
               placeholder="Name"
-              className="input input-bordered"
+              required
             />
           </div>
 
           <div className="form-control mt-6">
             <button className="btn btn-neutral font-bold text-white text-lg">
-              Sign Up
+              Update Information
             </button>
           </div>
         </form>
