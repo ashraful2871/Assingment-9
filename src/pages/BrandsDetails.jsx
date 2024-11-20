@@ -73,7 +73,7 @@ const BrandsDetails = () => {
                 onCopy={() => handleCopy(coupon.coupon_code)}
               >
                 <div>
-                  <button className="btn bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mb-4">
+                  <button className="btn btn-success text-white font-bold text-xl mb-4">
                     Copy Code
                   </button>
                 </div>
@@ -85,7 +85,7 @@ const BrandsDetails = () => {
                 <a
                   target="_blank"
                   href={shop_Link}
-                  className="btn btn-neutral font-bold text-white"
+                  className="btn btn-neutral font-bold text-xl text-white"
                 >
                   Use Now
                 </a>

@@ -5,9 +5,18 @@ const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="mt-5 flex justify-center ">
-      <div className="card bg-base-100 shadow-xl border-2 p-4">
-        <figure>
+    <div className="mt-10 flex flex-col items-center space-y-5">
+      <h2 className="text-center text-3xl font-bold mb-8">
+        "Hi there! Great to see you here"
+      </h2>
+      <div className="card bg-base-100 w-[500px] shadow-xl border-2 p-2">
+        <figure
+          style={{
+            backgroundImage:
+              "url(https://i.ibb.co.com/yRHHcMg/black-friday-sale-up-50-off-red-black-price-tags-sales-tags-166207-356.jpg)",
+          }}
+          className=" p-9 rounded-xl h-72"
+        >
           <img
             className="w-36 h-36 border-4 border-neutral rounded-full object-cover"
             src={user?.photoURL}
