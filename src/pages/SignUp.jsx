@@ -149,7 +149,9 @@ const SignUp = () => {
             <p className="text-center mt-2 text-red-600">{error}</p>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Sign Up</button>
+            <button className="btn btn-neutral font-bold text-white text-lg">
+              Sign Up
+            </button>
           </div>
         </form>
         <div className="divider mt-0">or</div>

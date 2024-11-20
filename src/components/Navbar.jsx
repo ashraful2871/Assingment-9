@@ -96,7 +96,7 @@ const Navbar = () => {
             />
           </div>
           <div>
-            <h2 className="font-bold text-3xl">Collect Coupon </h2>
+            <h2 className="font-extrabold text-3xl">Collect Coupon </h2>
           </div>
         </Link>
       </div>

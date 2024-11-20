@@ -10,7 +10,7 @@ const Brands = () => {
       <h2 className="text-center text-4xl font-bold my-5">
         Explore The Top E-Commerce Brands in Bangladesh
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 animate__animated animate__zoomIn">
         {brandsData.map((brand, idx) => (
           <div
             key={idx}

@@ -1,8 +1,14 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/update-profile");
+  };
 
   return (
     <div className="mt-10 flex flex-col items-center space-y-5">
@@ -27,7 +33,10 @@ const MyProfile = () => {
           <h2 className="card-title font-bold">{user?.displayName}</h2>
           <p className="font-semibold">Email: {user?.email}</p>
           <div className="card-actions">
-            <button className="btn btn-neutral font-bold text-white text-lg">
+            <button
+              onClick={handleNavigate}
+              className="btn btn-neutral font-bold text-white text-lg"
+            >
               Update{" "}
             </button>
           </div>

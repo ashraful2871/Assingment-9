@@ -6,7 +6,7 @@ const BrandSells = ({ brandData }) => {
 
   return (
     <div>
-      <h2 className="text-center text-5xl font-semibold mb-5">
+      <h2 className="text-center text-5xl font-extrabold mb-5">
         Brands on Sell
       </h2>
       <div className="grid grid-cols-4 gap-5">

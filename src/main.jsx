@@ -14,6 +14,8 @@ import About from "./pages/About";
 import BrandsDetails from "./pages/BrandsDetails";
 import Error from "./pages/Error";
 import ForgetPassword from "./pages/ForgetPassword";
+import UpdateProfile from "./pages/UpdateProfile";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +71,14 @@ const router = createBrowserRouter([
         path: "/forget-password",
         element: <ForgetPassword></ForgetPassword>,
       },
+      {
+        path: "/update-profile",
+        element: (
+          <PrivetRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivetRoute>
+        ),
+      },
     ],
   },
 ]);
@@ -76,7 +86,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </AuthProvider>
   </StrictMode>
 );
