@@ -15,7 +15,7 @@ const BrandsCard = ({ brand }) => {
         <p className="text-lg font-semibold">Category: {category}</p>
         <div className="card-actions justify-start">
           <Link
-            to={`/brand-details/${_id}`}
+            to={`/brand/${_id}`}
             className="btn btn-neutral font-bold text-white"
           >
             Show Details

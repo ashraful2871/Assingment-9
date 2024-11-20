@@ -10,7 +10,7 @@ const TopBrands = ({ brandData }) => {
       </p>
       <Marquee pauseOnHover={true} speed={40}>
         {brandData.map((brand, idx) => (
-          <Link className="ml-40" key={idx} to={`/brand-details/${brand._id}`}>
+          <Link className="ml-40" key={idx} to={`/brand/${brand._id}`}>
             {" "}
             <img
               className="w-24 h-24 mx-auto rounded-full"

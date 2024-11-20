@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { IoHomeOutline } from "react-icons/io5";
 import { TbArrowRoundaboutLeft, TbBrandStackshare } from "react-icons/tb";
 import { CgProfile } from "react-icons/cg";
+import { VscFeedback } from "react-icons/vsc";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -56,6 +57,14 @@ const Navbar = () => {
             <TbArrowRoundaboutLeft />
           </span>{" "}
           About Dev
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className=" font-bold" to="/review">
+          <span className="text-base">
+            <VscFeedback />
+          </span>{" "}
+          Review
         </NavLink>
       </li>
     </>
@@ -136,7 +145,7 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleSignOut}
-              className="btn btn-neutral font-bold text-white text-lg"
+              className="btn btn-neutral font-bold text-white text-base md:text-lg"
             >
               Sign Out
             </button>

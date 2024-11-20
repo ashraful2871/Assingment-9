@@ -85,7 +85,7 @@ const Brands = () => {
               <p>{brand.description}</p>
               <div className="card-actions items-center gap-8 md:gap-4 flex-col md:flex-row">
                 <Link
-                  to={`/brand-details/${brand._id}`}
+                  to={`/brand/${brand._id}`}
                   className="btn btn-neutral font-bold text-white text-lg"
                 >
                   View Coupons

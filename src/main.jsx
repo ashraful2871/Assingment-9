@@ -15,6 +15,7 @@ import BrandsDetails from "./pages/BrandsDetails";
 import Error from "./pages/Error";
 import ForgetPassword from "./pages/ForgetPassword";
 import UpdateProfile from "./pages/UpdateProfile";
+import Review from "./pages/Review";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
         loader: () => fetch("/couponCollect.json"),
       },
       {
-        path: "/brand-details/:id",
+        path: "/brand/:id",
         element: (
           <PrivetRoute>
             <BrandsDetails></BrandsDetails>
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
             <UpdateProfile></UpdateProfile>
           </PrivetRoute>
         ),
+      },
+      {
+        path: "/review",
+        element: <Review></Review>,
       },
     ],
   },
