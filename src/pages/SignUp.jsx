@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const SignUp = () => {
   const { signUp, setUser, updateUserProfile, signInGoogle } =
@@ -90,86 +91,93 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex justify-center mt-10">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <h2 className="text-center text-4xl font-bold mt-6">Sign Up Now</h2>
-        <form onSubmit={handleSignUpSubmit} className="card-body">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">PhotoURL</span>
-            </label>
-            <input
-              type="text"
-              name="PhotoURL"
-              placeholder="PhotoURl"
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="email"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control relative">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              placeholder="password"
-              className="input input-bordered"
-              required
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="btn btn-xs absolute right-2 top-12 text-lg"
-            >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Coupon Collect - Sign Up</title>
+      </Helmet>
+
+      <div className="flex justify-center mt-10">
+        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <h2 className="text-center text-4xl font-bold mt-6">Sign Up Now</h2>
+          <form onSubmit={handleSignUpSubmit} className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">PhotoURL</span>
+              </label>
+              <input
+                type="text"
+                name="PhotoURL"
+                placeholder="PhotoURl"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="email"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control relative">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="password"
+                className="input input-bordered"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="btn btn-xs absolute right-2 top-12 text-lg"
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+              <p className="text-center mt-2 text-red-600">{error}</p>
+            </div>
+            <div className="form-control mt-6">
+              <button className="btn btn-neutral font-bold text-white text-lg">
+                Sign Up
+              </button>
+            </div>
+          </form>
+          <div className="divider mt-0">or</div>
+          <div className="flex justify-center mb-4">
+            <button onClick={handleGoogleLogin} className="text-3xl">
+              <FcGoogle />
             </button>
-            <p className="text-center mt-2 text-red-600">{error}</p>
           </div>
-          <div className="form-control mt-6">
-            <button className="btn btn-neutral font-bold text-white text-lg">
-              Sign Up
-            </button>
+          <div className="mb-4">
+            <p className="text-center">
+              Already Have An Account ? {""}
+              <Link className="text-[#F8605D]" to="/login">
+                Login
+              </Link>
+            </p>
           </div>
-        </form>
-        <div className="divider mt-0">or</div>
-        <div className="flex justify-center mb-4">
-          <button onClick={handleGoogleLogin} className="text-3xl">
-            <FcGoogle />
-          </button>
-        </div>
-        <div className="mb-4">
-          <p className="text-center">
-            Already Have An Account ? {""}
-            <Link className="text-[#F8605D]" to="/login">
-              Login
-            </Link>
-          </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

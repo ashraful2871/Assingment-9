@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const Brands = () => {
@@ -10,6 +11,10 @@ const Brands = () => {
   });
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Coupon Collect - Brands</title>
+      </Helmet>
       <h2 className="text-center text-2xl md:text-4xl font-extrabold my-5">
         Explore The Top E-Commerce Brands in Bangladesh
       </h2>
@@ -80,7 +85,7 @@ const Brands = () => {
               <p>{brand.description}</p>
               <div className="card-actions items-center gap-8 md:gap-4 flex-col md:flex-row">
                 <Link
-                  to={`/brands-details/${brand._id}`}
+                  to={`/brand-details/${brand._id}`}
                   className="btn btn-neutral font-bold text-white text-lg"
                 >
                   View Coupons

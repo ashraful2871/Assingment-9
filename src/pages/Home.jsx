@@ -2,14 +2,16 @@ import React, { useContext } from "react";
 import TopBrands from "../components/TopBrands";
 import BrandSells from "../components/BrandSels";
 import { useLoaderData } from "react-router-dom";
-import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const brandData = useLoaderData();
-  const { user } = useContext(AuthContext);
-
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Coupon Collect - Home</title>
+      </Helmet>
       <div className="md:p-3">
         <div className="carousel w-full rounded-2xl border-2 h-48 md:h-[400px] lg:h-[600px]">
           <div id="slide1" className="carousel-item relative w-full">
