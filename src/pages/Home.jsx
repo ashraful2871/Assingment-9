@@ -7,18 +7,9 @@ import { AuthContext } from "../provider/AuthProvider";
 const Home = () => {
   const brandData = useLoaderData();
   const { user } = useContext(AuthContext);
-  // console.log(data);
 
   return (
     <div>
-      {user && (
-        <h2 className="flex justify-center ">
-          <p className="text-2xl md:text-4xl font-bold mb-10 p-2 md:p-0 text-center">
-            "Hay {user?.displayName} Welcome To Our Site"
-          </p>
-        </h2>
-      )}
-
       <div className="md:p-3">
         <div className="carousel w-full rounded-2xl border-2 h-48 md:h-[400px] lg:h-[600px]">
           <div id="slide1" className="carousel-item relative w-full">

@@ -18,7 +18,7 @@ const BrandsCard = ({ brand }) => {
             to={`/brand-details/${_id}`}
             className="btn btn-neutral font-bold text-white"
           >
-            Buy Now
+            Show Details
           </Link>
         </div>
       </div>
