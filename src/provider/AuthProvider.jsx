@@ -16,23 +16,17 @@ const AuthProvider = ({ children }) => {
   const provider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  console.log(user);
-  const userEmail = user?.email;
-  // console.log(userEmail);
-
-  // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
   //sign up
   const signUp = (email, password) => {
-    // if (!passwordRegex.test(password)) {
-    //   toast.error("dose match");
-    // }
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // Login
   const loginUser = (email, password) => {
+    console.log(email);
+
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
@@ -78,7 +72,6 @@ const AuthProvider = ({ children }) => {
     setUser,
     updateUserProfile,
     signInGoogle,
-    userEmail,
     forgetPassword,
   };
   return (

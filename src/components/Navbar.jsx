@@ -105,7 +105,16 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
+
       <div className="navbar-end items-center gap-5">
+        {user && (
+          <div className="text-center">
+            <h2 className="text-2xl font-bold">Hi.</h2>
+            <p className="font-semibold">
+              <small>{user?.displayName}</small>
+            </p>
+          </div>
+        )}
         <div className="">
           {user?.email && (
             <div className="hidden md:block">
@@ -132,12 +141,20 @@ const Navbar = () => {
               Sign Out
             </button>
           ) : (
-            <Link
-              to="/login"
-              className="btn btn-neutral font-bold text-white text-lg"
-            >
-              Login
-            </Link>
+            <>
+              <Link
+                to="/login"
+                className="btn btn-neutral font-bold text-white text-lg"
+              >
+                Login
+              </Link>
+              <Link
+                to="/sign-up"
+                className="btn btn-neutral font-bold text-white text-lg ml-2"
+              >
+                Sign Up
+              </Link>
+            </>
           )}
         </div>
       </div>

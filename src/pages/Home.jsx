@@ -12,8 +12,10 @@ const Home = () => {
   return (
     <div>
       {user && (
-        <h2 className="flex justify-center text-2xl md:text-4xl font-bold mb-10 p-2 md:p-0 text-center">
-          <p>"Hay {user?.displayName} Welcome To Our Site"</p>
+        <h2 className="flex justify-center ">
+          <p className="text-2xl md:text-4xl font-bold mb-10 p-2 md:p-0 text-center">
+            "Hay {user?.displayName} Welcome To Our Site"
+          </p>
         </h2>
       )}
 
@@ -65,7 +67,7 @@ const Home = () => {
       </div>
 
       <div className="py-6">
-        <TopBrands></TopBrands>
+        <TopBrands brandData={brandData}></TopBrands>
       </div>
       <BrandSells brandData={brandData}></BrandSells>
     </div>

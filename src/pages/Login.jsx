@@ -9,11 +9,11 @@ const Login = () => {
   const { loginUser, signInGoogle, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+
   const [showPassword, setShowPassword] = useState(false);
-  // const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
   const handleLogin = (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
     const password = e.target.password.value;
 
     // login
@@ -68,6 +68,7 @@ const Login = () => {
               placeholder="email"
               className="input input-bordered"
               required
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="form-control relative">
@@ -83,6 +84,7 @@ const Login = () => {
             />
             <label className="label">
               <Link
+                state={{ email }}
                 to="/forget-password"
                 className="label-text-alt link link-hover"
               >

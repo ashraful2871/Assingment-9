@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         loader: () => fetch("/couponCollect.json"),
       },
       {
-        path: "/brands-details/:id",
+        path: "/brand-details/:id",
         element: (
           <PrivetRoute>
             <BrandsDetails></BrandsDetails>
