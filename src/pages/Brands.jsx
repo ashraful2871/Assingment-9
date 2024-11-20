@@ -7,7 +7,7 @@ const Brands = () => {
 
   return (
     <div>
-      <h2 className="text-center text-4xl font-bold my-5">
+      <h2 className="text-center text-2xl md:text-4xl font-extrabold my-5">
         Explore The Top E-Commerce Brands in Bangladesh
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 animate__animated animate__zoomIn">
@@ -65,7 +65,7 @@ const Brands = () => {
                 {brand.brand_name}
               </h2>
               <p>{brand.description}</p>
-              <div className="card-actions">
+              <div className="card-actions items-center gap-8 md:gap-4 flex-col md:flex-row">
                 <Link
                   to={`/brands-details/${brand._id}`}
                   className="btn btn-neutral font-bold text-white text-lg"
@@ -73,9 +73,9 @@ const Brands = () => {
                   View Coupons
                 </Link>
                 {brand.isSaleOn && (
-                  <p className="ml-1 text-2xl font-bold text-red-600 animate-bounce">
+                  <span className=" text-2xl font-bold text-red-600 animate-bounce">
                     Sale Is On
-                  </p>
+                  </span>
                 )}
               </div>
             </div>

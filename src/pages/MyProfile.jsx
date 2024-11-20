@@ -12,10 +12,10 @@ const MyProfile = () => {
 
   return (
     <div className="mt-10 flex flex-col items-center space-y-5">
-      <h2 className="text-center text-3xl font-bold mb-8">
+      <h2 className="text-center text-2xl md:text-3xl font-extrabold md:mb-8">
         "Hi there! Great to see you here"
       </h2>
-      <div className="card bg-base-100 w-[500px] shadow-xl border-2 p-2">
+      <div className="card bg-base-100 w-96 md:w-[500px] shadow-xl border-2 p-2">
         <figure
           style={{
             backgroundImage:

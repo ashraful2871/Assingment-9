@@ -58,11 +58,11 @@ const BrandsDetails = () => {
         <span> ({rating})</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-96 ml-40 ">
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-[500px] border-2 border-red-600">
         {coupons.map((coupon, idx) => (
           <div
             key={idx}
-            className="card bg-base-100 w-[550px]  shadow-xl border-2 mt-9"
+            className="card bg-base-100 md:w-[550px] md:ml-24 lg:ml-12 shadow-xl border-4 md:border-2 my-3 md:my-9"
           >
             <div className="card-body">
               <h3 className="text-xl font-semibold text-orange-600 mb-2">

@@ -96,7 +96,9 @@ const Navbar = () => {
             />
           </div>
           <div>
-            <h2 className="font-extrabold text-3xl">Collect Coupon </h2>
+            <h2 className="font-extrabold text-xl md:text-3xl">
+              Collect Coupon{" "}
+            </h2>
           </div>
         </Link>
       </div>
@@ -106,15 +108,17 @@ const Navbar = () => {
       <div className="navbar-end items-center gap-5">
         <div className="">
           {user?.email && (
-            <div className="flex flex-col items-center">
-              <img
-                className="rounded-full w-8 h-8"
-                src={user.photoURL}
-                alt=""
-              />
-              <p>
-                <small>{user?.email}</small>
-              </p>
+            <div className="hidden md:block">
+              <div className="flex flex-col items-center">
+                <img
+                  className="rounded-full w-8 h-8"
+                  src={user.photoURL}
+                  alt=""
+                />
+                <p>
+                  <small>{user?.email}</small>
+                </p>
+              </div>
             </div>
           )}
         </div>

@@ -5,7 +5,7 @@ import "animate.css";
 const BrandsCard = ({ brand }) => {
   const { _id, brand_logo, brand_name, coupons, category } = brand;
   return (
-    <div className="card card-compact bg-base-100 border-2 p-4 animate__animated animate__zoomIn">
+    <div className="card card-compact bg-base-100 border-4 md:border-2 p-4 animate__animated animate__zoomIn">
       <figure className=" ">
         <img className="h-40 w-40 rounded-full " src={brand_logo} alt="Shoes" />
       </figure>
