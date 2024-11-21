@@ -96,7 +96,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       ) : (
-        <div className="md:hidden block">
+        <div className="md:hidden block ">
           <li>
             <NavLink className=" font-bold" to="/login">
               <span className="text-base">
@@ -198,20 +198,21 @@ const Navbar = () => {
               Sign Out
             </button>
           ) : (
-            <>
+            <div className="flex items-center">
               <Link
                 to="/login"
                 className="btn btn-neutral font-bold text-white text-lg"
               >
                 Login
               </Link>
+
               <Link
                 to="/sign-up"
-                className="btn btn-neutral font-bold text-white text-lg ml-2 hidden md:block"
+                className="btn pt-2 btn-neutral font-bold text-white text-lg ml-2 hidden md:block"
               >
                 Sign Up
               </Link>
-            </>
+            </div>
           )}
         </div>
       </div>
