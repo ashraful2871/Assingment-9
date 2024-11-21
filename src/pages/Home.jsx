@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import TopBrands from "../components/TopBrands";
 import BrandSells from "../components/BrandSels";
 import { useLoaderData } from "react-router-dom";
