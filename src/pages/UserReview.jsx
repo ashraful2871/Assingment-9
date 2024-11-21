@@ -10,7 +10,7 @@ const UserReview = () => {
         <title>Collect Coupon - User Review</title>
       </Helmet>
       <h2 className="text-center font-extrabold text-4xl my-10">User Review</h2>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {userData.map((user, idx) => (
           <div
             key={idx}

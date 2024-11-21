@@ -28,7 +28,7 @@ const Brands = () => {
           onChange={(e) => setSearchBrands(e.target.value)}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 animate__animated animate__zoomIn">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-10 animate__animated animate__zoomIn">
         {searchByBrands.map((brand, idx) => (
           <div
             key={idx}

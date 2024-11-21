@@ -3,10 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { IoHomeOutline } from "react-icons/io5";
-import { TbArrowRoundaboutLeft, TbBrandStackshare } from "react-icons/tb";
+import {
+  TbArrowRoundaboutLeft,
+  TbBrandStackshare,
+  TbLogin2,
+} from "react-icons/tb";
 import { FaRegUser } from "react-icons/fa";
 import { RiFeedbackLine } from "react-icons/ri";
-import { CgProfile } from "react-icons/cg";
+import { CgLogOut, CgProfile } from "react-icons/cg";
 import { VscPreview } from "react-icons/vsc";
 
 const Navbar = () => {
@@ -77,6 +81,40 @@ const Navbar = () => {
           User Review
         </NavLink>
       </li>
+
+      {user ? (
+        <li>
+          <NavLink
+            onClick={handleSignOut}
+            className=" font-bold md:hidden"
+            to="/sign-up"
+          >
+            <span className="text-base">
+              <CgLogOut />
+            </span>
+            Sign Out
+          </NavLink>
+        </li>
+      ) : (
+        <div className="md:hidden block">
+          <li>
+            <NavLink className=" font-bold" to="/login">
+              <span className="text-base">
+                <TbLogin2 />
+              </span>
+              Login
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className=" font-bold" to="/sign-up">
+              <span className="text-base">
+                <CgLogOut />
+              </span>
+              Sign Up
+            </NavLink>
+          </li>
+        </div>
+      )}
     </>
   );
   return (
@@ -155,7 +193,7 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleSignOut}
-              className="btn btn-neutral font-bold text-white text-base"
+              className="btn btn-neutral font-bold text-white text-base md:block hidden "
             >
               Sign Out
             </button>
@@ -169,7 +207,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/sign-up"
-                className="btn btn-neutral font-bold text-white text-lg ml-2"
+                className="btn btn-neutral font-bold text-white text-lg ml-2 hidden md:block"
               >
                 Sign Up
               </Link>
