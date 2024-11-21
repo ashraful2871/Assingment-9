@@ -1,10 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const UserReview = () => {
   const userData = useLoaderData();
   return (
     <>
+      <Helmet>
+        <title>Collect Coupon - User Review</title>
+      </Helmet>
       <h2 className="text-center font-extrabold text-4xl my-10">User Review</h2>{" "}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {userData.map((user, idx) => (
