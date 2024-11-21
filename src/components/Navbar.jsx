@@ -4,8 +4,10 @@ import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { IoHomeOutline } from "react-icons/io5";
 import { TbArrowRoundaboutLeft, TbBrandStackshare } from "react-icons/tb";
+import { FaRegUser } from "react-icons/fa";
+import { RiFeedbackLine } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
-import { VscFeedback } from "react-icons/vsc";
+import { VscPreview } from "react-icons/vsc";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -60,11 +62,19 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink className=" font-bold" to="/review">
+        <NavLink className=" font-bold" to="/feedback">
           <span className="text-base">
-            <VscFeedback />
+            <RiFeedbackLine />
           </span>{" "}
-          Review
+          Feedback
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className=" font-bold" to="/user-review">
+          <span className="text-base">
+            <VscPreview />
+          </span>{" "}
+          User Review
         </NavLink>
       </li>
     </>
@@ -112,7 +122,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 mr-14 ">{links}</ul>
       </div>
 
       <div className="navbar-end items-center gap-5">
@@ -145,7 +155,7 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleSignOut}
-              className="btn btn-neutral font-bold text-white text-base md:text-lg"
+              className="btn btn-neutral font-bold text-white text-base"
             >
               Sign Out
             </button>

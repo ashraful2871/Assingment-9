@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Jhankar Mahbub",
+    "comment": "The website is user-friendly and easy to navigate. I enjoyed shopping here!",
+    "rating": 5,
+    "image": "https://i.ibb.co.com/NS1Vm3C/jjj.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Ashraful Islam",
+    "comment": "Good experience overall, but the checkout process could be faster.",
+    "rating": 4,
+    "image": "https://i.ibb.co.com/ZT1Sm1n/ash.jpg"
+  },
+  {
+    "id": "3",
+    "name": "H.S Rokon",
+    "comment": "The website is okay, but it took some time to load.",
+    "rating": 3,
+    "image": "https://i.ibb.co.com/KxwcB2d/rok.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Galib Al Zidan",
+    "comment": "I had trouble finding the items I wanted. Search functionality needs improvement.",
+    "rating": 2,
+    "image": "https://i.ibb.co.com/G5b8Wt1/zzz.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Almani Tahsin",
+    "comment": "Terrible experience! The website kept crashing.",
+    "rating": 1,
+    "image": "https://i.ibb.co.com/5BCXryr/20241023-081155.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Protik Roy",
+    "comment": "Great design and smooth performance. Loved the overall experience!",
+    "rating": 5,
+    "image": "https://i.ibb.co.com/zG6qCSK/prottt.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Shakib Khan",
+    "comment": "Decent experience but could use more product filtering options.",
+    "rating": 4,
+    "image": "https://i.ibb.co.com/fQyDC0c/usss.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Ali Khan",
+    "comment": "Nice interface but the mobile version needs work.",
+    "rating": 3,
+    "image": "https://i.ibb.co.com/fQyDC0c/usss.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Hero Alom",
+    "comment": "Fantastic! Found everything I needed easily.",
+    "rating": 5,
+    "image": "https://i.ibb.co.com/HDrBdbS/hero.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Fahim Mia",
+    "comment": "The product categories were confusing to browse.",
+    "rating": 2,
+    "image": "https://i.ibb.co.com/fQyDC0c/usss.jpg"
+  }
+]

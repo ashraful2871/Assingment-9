@@ -32,6 +32,13 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error.message);
+        toast.error("Invalid Email & Password", {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
       });
   };
 
@@ -107,7 +114,9 @@ const Login = () => {
               </button>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-neutral font-bold text-white text-lg">
+                Login
+              </button>
             </div>
           </form>
           <div className="divider mt-0">or</div>

@@ -16,6 +16,7 @@ import Error from "./pages/Error";
 import ForgetPassword from "./pages/ForgetPassword";
 import UpdateProfile from "./pages/UpdateProfile";
 import Review from "./pages/Review";
+import UserReview from "./pages/UserReview";
 
 const router = createBrowserRouter([
   {
@@ -80,8 +81,17 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/review",
-        element: <Review></Review>,
+        path: "/feedback",
+        element: (
+          <PrivetRoute>
+            <Review></Review>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/user-review",
+        element: <UserReview></UserReview>,
+        loader: () => fetch("/userReview.json"),
       },
     ],
   },

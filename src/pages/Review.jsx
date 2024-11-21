@@ -8,7 +8,7 @@ const Review = () => {
   return (
     <>
       <Helmet>
-        <title>Collect Coupon - Review</title>
+        <title>Collect Coupon - Feedback</title>
       </Helmet>
       <div className="bg-black min-h-56 rounded-xl">
         <div className=" text-center">
@@ -28,7 +28,7 @@ const Review = () => {
       </div>
       <div className="bg-[#F6F6F6] p-4 md:p-16">
         <h2 className="text-center mt-5 md:mt-0 mb-8 text-3xl md:text-4xl font-extrabold">
-          Write Comment Here :
+          Write Feedback
         </h2>
         <div className="card bg-base-100 w-full shrink-0 shadow-xl container mx-auto">
           <form onSubmit={handleReload} className="card-body">
@@ -68,17 +68,17 @@ const Review = () => {
 
             <div className="form-control ">
               <label className="label">
-                <span className="label-text">Write Your Comment</span>
+                <span className="label-text">Write Your Feedback</span>
               </label>
               <textarea
                 className="textarea h-32 bg-[#F6F6F6]"
-                placeholder="Write Comment...."
+                placeholder="Write Feedback...."
                 required
               ></textarea>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-neutral font-bold text-white text-lg rounded-full">
-                Comment
+                Send Feedback
               </button>
             </div>
           </form>
