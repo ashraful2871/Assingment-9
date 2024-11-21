@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 
 const UserReview = () => {
   const userData = useLoaderData();
-  console.log(userData);
   return (
     <>
       <h2 className="text-center font-extrabold text-4xl my-10">User Review</h2>{" "}
