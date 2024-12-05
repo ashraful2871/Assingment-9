@@ -8,7 +8,6 @@ import {
   TbBrandStackshare,
   TbLogin2,
 } from "react-icons/tb";
-import { FaRegUser } from "react-icons/fa";
 import { RiFeedbackLine } from "react-icons/ri";
 import { CgLogOut, CgProfile } from "react-icons/cg";
 import { VscPreview } from "react-icons/vsc";
